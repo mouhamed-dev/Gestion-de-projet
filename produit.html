@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" type="favicon.ico" href="img/logo_product_transparent.png">
+</head>
+<body>
+
+    <div id="chargement" class="loader">
+        <span class="lettre">C</span>
+        <span class="lettre">H</span>
+        <span class="lettre">A</span>
+        <span class="lettre">R</span>
+        <span class="lettre">G</span>
+        <span class="lettre">E</span>
+        <span class="lettre">M</span>
+        <span class="lettre">E</span>
+        <span class="lettre">N</span>
+        <span class="lettre">T</span>
+        <div class="img-load">
+            <img src="img/logo_product.png" alt="">
+        </div>
+    </div>
+    
+    <nav class="navbar">
+        <h3><a href="index.html" id="link-logo">Gestion de Produits</a></h3>
+        <ul class="list-menu">
+            <li class="link-accueil"><a href="index.html">Accueil</a></li>
+            <li class="link-produit"><a href="produit.html">Ajouter un produit</a></li>
+            <li class="lnk-inscrit"><button id="btn-link">S'inscrire</button></li>
+        </ul>
+    </nav>
+    <section class="section-product">
+        <div class="container" id="ajout-produit">
+            <h1>Gestion des Produits</h1>
+            <form id="product-form">
+
+                <label for="name">Nom du produit</label>
+                <input type="text" id="name" placeholder="Nom du produit" required>
+
+                <label for="quantity">Quantité en stock</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantité" min="0" required>
+
+                <label for="price">Prix</label>
+                <input type="number" id="price" placeholder="Prix" required>
+                    
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Description"></textarea>
+            <button type="submit" id="submit">Ajouter</button><p id="notification">Produit ajouté avec succès ✅</p>
+            </form>
+            <div id="product-list"></div>
+        </div>
+    </section>
+
+     <!-- Tableau des produits -->
+     <div class="products-table-container">
+        <h2>Liste des Produits</h2>
+        <table id="products-table" border="1">
+            <thead>
+                <tr>
+                    <th>Nom du produit</th>
+                    <th>Quantité</th>
+                    <th>Prix</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="products-list">
+                <!-- Les produits seront ajoutés dynamiquement ici -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/produit.js"></script>
+</body>
+</html>

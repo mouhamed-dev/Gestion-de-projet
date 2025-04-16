@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+</head>
+<body>
+    <form id="form">
+        
+        <input type="text" id="nom">
+        <input type="text" id="prenom">
+        <button type="submit">Ajouter</button>
+
+    </form>
+    <div id="container" >
+`
+    </div>
+ <script>
+    let form=document.getElementById("form")
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        let nom=document.getElementById("nom").value;
+        let prenom=document.getElementById("prenom").value;
+        console.log("bonjour je me nom "+prenom +"" +nom);
+        let container=document.getElementById("container")
+        let div=document.createElement("div");
+        div.style.border="2px solid red"
+
+         div.style.padding="10px"
+         div.style.width="40%"
+         div.innerHTML=`<h1 class="tittle">${nom}</h1><h1 class="tittle">${prenom}</h1><span> <button class="supp">supprimer</button></span> <span><button class="modi">modifier</button></span>`
+
+        container.appendChild(div);
+        form.reset()
+        let buttonsupp=div.querySelector(".supp");
+    buttonsupp.addEventListener("click",function(){
+        div.remove()
+    })
+    let buttonmodi= div.querySelector(".modi");
+    buttonmodi. addEventListener("click", function (){
+      let nouveaunom =prompt("entrer le nouveaunom",nom)
+      let nouveauprenom =prompt("saisir le nouveauprenom",prenom)
+      let tittle= document.querySelectorAll(".tittle")
+      tittle[0].textContent=nouveaunom
+      tittle[1].textContent=nouveauprenom
+    })
+    }) 
+   
+ </script>
+
+</body>
+</html>

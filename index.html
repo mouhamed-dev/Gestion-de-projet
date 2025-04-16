@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Produits</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="favicon.ico" href="img/logo_product_transparent.png">
+</head>
+</head>
+<body>
+    
+    <div id="chargement" class="loader">
+        <span class="lettre">C</span>
+        <span class="lettre">H</span>
+        <span class="lettre">A</span>
+        <span class="lettre">R</span>
+        <span class="lettre">G</span>
+        <span class="lettre">E</span>
+        <span class="lettre">M</span>
+        <span class="lettre">E</span>
+        <span class="lettre">N</span>
+        <span class="lettre">T</span>
+        <div class="img-load">
+            <img src="img/logo_product.png" alt="">
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <h3><a href="index.html" id="link-logo">Gestion de Produits</a></h3>
+        <ul class="list-menu">
+            <li class="link-accueil"><a href="#">Accueil</a></li>
+            <li class="link-produit"><a href="produit.html">Ajouter un produit</a></li>
+            <li class="lnk-inscrit"><button id="btn-link">S'inscrire</button></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <div class="div-titre box">
+            <h1 id="titre">Bienvenue <span id="Username"></span> sur notre site de gestion de produits !</h1>
+        </div>
+        
+        <div class="div-user box">
+            <img id="preview" class="img-user" alt="Aperçu du profil" />
+        </div>
+    </div>
+
+<section id="section-infos">
+    <div class="div-infos">
+        <h3 class="titre-h3">Informations</h3>
+        <div id="list-infos">
+            <ul>
+                <li>Prénom : <span id="Username"></span></li>
+                <li>Nom : <span id="fastname"></span></li>
+                <li>Email : <span id="usermail"></span></li>
+            </ul>
+        </div>
+    </div>
+        <div id="stats">
+            <p><strong>Nombre total de produits :</strong> <span id="total-products">0</span></p>
+            <p><strong>Utilisateurs inscrits :</strong> <span id="total-users">0</span></p>
+        </div>
+    
+</section>
+          <div class="features">
+            <a href="produit.html">
+            <div class="card">
+              <h3>📦 Ajouter un produit</h3>
+              <p>Gérez vos produits rapidement en quelques clics.</p>
+            </div>
+            </a>
+
+            <a href="produit.html#products-table">
+            <div class="card">
+              <h3>📝 Modifier</h3>
+              <p>Changez les informations de vos produits facilement dans le tableau.</p>
+            </div>
+            </a>
+
+            <a href="produit.html#products-table">
+            <div class="card">
+              <h3>🗑️ Supprimer</h3>
+              <p>Supprimez les produits que vous ne souhaitez plus garder.</p>
+            </div>
+            </a>
+          </div>
+          
+
+    <div>
+        <div id="inscription" class="form-container">
+            <button id="close-modal" class="close-btn">X</button>
+            <form class="form" id="myForm">
+
+                <div class="div-form">
+                    <label for="prenom">Prénom :</label><br>
+                    <input type="text" id="prenom" name="prenom" require placeholder="votre prénom"><br><br>
+                </div>
+
+                <div class="div-form">
+                    <label for="nom">Nom :</label><br>
+                    <input type="text" id="nom" name="nom" required placeholder="votre nom"><br><br>
+                </div>
+
+                <div class="div-form">
+                    <label for="email">Email :</label><br>
+                    <input type="email" id="email" name="email" required placeholder="votre email"><br><br>
+                </div>
+
+                <div class="div-form">
+                    <label for="motdepasse">Mot de passe :</label><br>
+                    <input type="password" id="motdepasse" name="motdepasse" required placeholder="Mot de passe"><br><br>
+                    <p id="errorElement"></p>
+                </div>
+
+                <div class="div-form">
+                    <label for="confirmer_motdepasse">Confirmer le mot de passe :</label><br>
+                    <input type="text" id="confirmer_motdepasse" name="confirmer_motdepasse" required placeholder="confirmer mot de passe"><br><br>
+                </div>
+
+                <div>
+                    <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" required>
+                </div>
+
+
+                <div class="div-form">
+                    <input type="submit" value="Envoyer" class="btn-inscription">
+                </div>
+                      
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body> 
+</html>
