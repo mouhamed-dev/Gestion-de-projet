@@ -58,6 +58,12 @@
      <!-- Tableau des produits -->
      <div class="products-table-container">
         <h2>Liste des Produits</h2>
+
+        <select id="tri" onchange="trierProduits()">
+            <option value="nom">Trier par nom</option>
+            <option value="prix">Trier par prix</option>
+        </select>          
+        
         <table id="products-table" border="1">
             <thead>
                 <tr>

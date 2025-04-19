@@ -146,6 +146,14 @@ body{
 }
 
 /*gestion de produits*/
+#tri{
+  width: 10%;
+  font-size: 16px;
+  padding: 3px;
+  margin-bottom: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
 
 .section-product{
     padding-top: 130px;
@@ -216,7 +224,7 @@ body{
   }
   
   button {
-    background: #007BFF;
+    background: var(--primary-color);
     color: white;
     cursor: pointer;
   }

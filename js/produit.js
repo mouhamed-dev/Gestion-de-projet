@@ -83,6 +83,19 @@ function editProduct(index) {
   };
 }
 
+function trierProduits() {
+  const critere = document.getElementById("tri").value;
+
+  if (critere === "nom") {
+    products.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (critere === "prix") {
+    products.sort((a, b) => a.price - b.price);
+  }
+
+  renderProducts(); // Met à jour l’affichage
+}
+
+
 function addProduct(e) {
   e.preventDefault();
   const name = nameInput.value.trim();
